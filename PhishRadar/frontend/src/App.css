@@ -1,0 +1,98 @@
+.App {
+  min-height: 100vh;
+  position: relative;
+}
+
+.terminal-cursor::after {
+  content: '_';
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.phone-mockup {
+  background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+  border: 8px solid #2a2a2a;
+  border-radius: 36px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.notification-slide {
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hacker-reveal {
+  animation: glitchReveal 0.5s ease-out;
+}
+
+@keyframes glitchReveal {
+  0% { clip-path: inset(0 100% 0 0); }
+  20% { clip-path: inset(0 80% 0 0); transform: translateX(-5px); }
+  40% { clip-path: inset(0 60% 0 0); transform: translateX(5px); }
+  60% { clip-path: inset(0 40% 0 0); transform: translateX(-3px); }
+  80% { clip-path: inset(0 20% 0 0); transform: translateX(3px); }
+  100% { clip-path: inset(0 0 0 0); transform: translateX(0); }
+}
+
+.terminal-mode {
+  background: #000000;
+  color: #00ff00;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.terminal-text {
+  text-shadow: 0 0 5px #00ff00;
+}
+
+.urgency-bar {
+  transition: width 1s ease-out, background-color 0.5s ease;
+}
+
+.stat-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.phish-example {
+  transition: all 0.3s ease;
+}
+
+.phish-example:hover {
+  transform: scale(1.02);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(193, 241, 48, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(193, 241, 48, 0.6), 0 0 40px rgba(193, 241, 48, 0.3);
+  }
+}
+
